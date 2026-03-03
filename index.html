@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SCHNITTSTELLE Elsterstraße — Friseursalon Leipzig</title>
+  <meta name="description"
+    content="Hochwertiger Friseursalon in Leipzig. Haarschnitt, Balayage, Coloration & mehr. Jetzt online Termin buchen." />
+  <link rel="icon" type="image/png" href="favicon.png" width="8" height="8" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,700;1,6..96,300;1,6..96,400&family=Syne:wght@400;500;700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-bar" id="scrollBar"></div>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="pre-inner">
+      <div class="pre-letters" id="preLetters">
+        <span>S</span><span>C</span><span>H</span><span>N</span><span>I</span><span>T</span><span>T</span>
+      </div>
+      <div class="pre-line-wrap">
+        <div class="pre-line" id="preLine"></div>
+      </div>
+      <div class="pre-counter" id="preCounter">0</div>
+    </div>
+    <div class="pre-curtain top" id="curtainTop"></div>
+    <div class="pre-curtain bot" id="curtainBot"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">SCHNITT<span>STELLE</span></a>
+    <div class="nav-right">
+      <a href="https://www.studiobookr.com/schnittstelle-elsterstrasse-62121" target="_blank" class="nav-book">TERMIN
+        BUCHEN</a>
+      <button class="nav-burger" id="burger" aria-label="Menü öffnen">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div class="menu" id="menu">
+    <nav class="menu-nav">
+      <a href="#about" class="menu-item" data-num="01"><em>Über</em> uns</a>
+      <a href="#services" class="menu-item" data-num="02">Leistungen</a>
+      <a href="#gallery" class="menu-item" data-num="03"><em>Galerie</em></a>
+      <a href="#reviews" class="menu-item" data-num="04">Bewertungen</a>
+      <a href="#contact" class="menu-item" data-num="05">Kontakt</a>
+    </nav>
+    <div class="menu-bottom">
+      <div class="menu-meta">
+        <span>0341 4895991</span>
+        <span>@schnittstelle_elsterstrasse</span>
+        <span>Elsterstraße 7a, Leipzig</span>
+      </div>
+      <a href="https://www.studiobookr.com/schnittstelle-elsterstrasse-62121" target="_blank" class="btn-dark">TERMIN
+        BUCHEN</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="ghost-num hero-ghost">01</div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-rule"></span>
+        Friseursalon · Leipzig · Seit 2010
+      </div>
+      <h1 class="hero-h1">
+        <div class="line-wrap">
+          <div class="line">Dein Haar.</div>
+        </div>
+        <div class="line-wrap">
+          <div class="line">Dein <em>Ausdruck.</em></div>
+        </div>
+        <div class="line-wrap">
+          <div class="line">Dein <em>Moment.</em></div>
+        </div>
+      </h1>
+      <div class="hero-footer">
+        <p class="hero-desc">Präzision, Stil und Persönlichkeit — im Herzen von Leipzig.</p>
+        <div class="hero-cta-wrap">
+          <a href="https://www.studiobookr.com/schnittstelle-elsterstrasse-62121" target="_blank"
+            class="btn-primary magnetic">Online Termin buchen</a>
+          <div class="scroll-hint"><span class="scroll-line"></span>Scroll</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-inner">
+      <div class="ticker-track" id="tickerTrack">
+        <span>Haarschnitt</span><span class="sep">✦</span>
+        <span>Balayage</span><span class="sep">✦</span>
+        <span>Babylights</span><span class="sep">✦</span>
+        <span>Crazy Color</span><span class="sep">✦</span>
+        <span>Coloration</span><span class="sep">✦</span>
+        <span>Strähnentechniken</span><span class="sep">✦</span>
+        <span>Blondierung</span><span class="sep">✦</span>
+        <span>Haarverdichtung</span><span class="sep">✦</span>
+        <span>Keratin</span><span class="sep">✦</span>
+        <span>Olaplex</span><span class="sep">✦</span>
+        <span>Haarschnitt</span><span class="sep">✦</span>
+        <span>Balayage</span><span class="sep">✦</span>
+        <span>Babylights</span><span class="sep">✦</span>
+        <span>Crazy Color</span><span class="sep">✦</span>
+        <span>Coloration</span><span class="sep">✦</span>
+        <span>Strähnentechniken</span><span class="sep">✦</span>
+        <span>Blondierung</span><span class="sep">✦</span>
+        <span>Haarverdichtung</span><span class="sep">✦</span>
+        <span>Keratin</span><span class="sep">✦</span>
+        <span>Olaplex</span><span class="sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHILOSOPHY / ABOUT -->
+  <section class="philosophy" id="about">
+    <div class="ghost-num">02</div>
+    <div class="phil-left">
+      <span class="section-label">Über uns</span>
+    </div>
+    <div class="phil-right">
+      <blockquote class="phil-quote r-up">"Wir machen nicht nur Haare — wir formen Identitäten."</blockquote>
+      <p class="body-copy r-up">SCHNITTSTELLE ist mehr als ein Salon. Hier treffen handwerkliche Präzision und
+        künstlerisches Gespür aufeinander. Unser Team aus erfahrenen Stilistinnen und Stylisten arbeitet mit
+        Premium-Produkten von Olaplex, Wella und L'Oréal Professionnel.</p>
+      <p class="body-copy r-up">Jede Behandlung wird individuell auf dich abgestimmt — weil kein Haar wie das andere
+        ist. Seit 2010 im Herzen von Leipzig.</p>
+      <div class="stats-row">
+        <div class="stat r-up">
+          <span class="stat-num" data-target="64">0</span>
+          <span class="stat-label">Google Reviews</span>
+        </div>
+        <div class="stat r-up">
+          <span class="stat-num gold">5.0</span>
+          <span class="stat-label">Sterne Rating</span>
+        </div>
+        <div class="stat r-up">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Jahre Erfahrung</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <div class="services-header-left">
+        <span class="section-label">Leistungen</span>
+        <h2 class="section-h2">Was wir für <em>dich tun.</em></h2>
+      </div>
+      <span class="services-count">— 06 Leistungen</span>
+    </div>
+    <div class="services-list">
+      <div class="svc-row r-up" data-href="#">
+        <span class="svc-num">01</span>
+        <span class="svc-name">Haarschnitt <span class="svc-arrow">→</span></span>
+        <span class="svc-desc">Präzise Schnitte für Damen &amp; Herren</span>
+        <span class="svc-price">ab 28 €</span>
+      </div>
+      <div class="svc-row r-up" data-href="#">
+        <span class="svc-num">02</span>
+        <span class="svc-name">Balayage <span class="svc-arrow">→</span></span>
+        <span class="svc-desc">Handgemalte Lichter, natürlicher Effekt</span>
+        <span class="svc-price">Anfrage</span>
+      </div>
+      <div class="svc-row r-up" data-href="#">
+        <span class="svc-num">03</span>
+        <span class="svc-name">Babylights <span class="svc-arrow">→</span></span>
+        <span class="svc-desc">Feinste Highlights, leuchtender Look</span>
+        <span class="svc-price">Anfrage</span>
+      </div>
+      <div class="svc-row r-up" data-href="#">
+        <span class="svc-num">04</span>
+        <span class="svc-name">Crazy Color <span class="svc-arrow">→</span></span>
+        <span class="svc-desc">Von Mint über Lila bis Kupfer</span>
+        <span class="svc-price">Anfrage</span>
+      </div>
+      <div class="svc-row r-up" data-href="#">
+        <span class="svc-num">05</span>
+        <span class="svc-name">Coloration <span class="svc-arrow">→</span></span>
+        <span class="svc-desc">Professionelle Farbe &amp; Blondierungen</span>
+        <span class="svc-price">ab 45 €</span>
+      </div>
+      <div class="svc-row r-up" data-href="#">
+        <span class="svc-num">06</span>
+        <span class="svc-name">Farbberatung <span class="svc-arrow">→</span></span>
+        <span class="svc-desc">Kostenloses Beratungsgespräch</span>
+        <span class="svc-price">kostenlos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-outer" id="gallery">
+    <div class="gallery-sticky">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-label-panel">
+          <span class="section-label">Galerie</span>
+          <h2 class="section-h2">Unsere <em>Arbeit</em> spricht.</h2>
+          <span class="gallery-scroll-hint">Scroll →</span>
+        </div>
+        <div class="gallery-img-panel" style="width:46vw">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=900&q=80" alt="Haarschnitt & Styling"
+            loading="lazy" />
+          <div class="gallery-caption">Haarschnitt &amp; Styling</div>
+        </div>
+        <div class="gallery-img-panel" style="width:38vw">
+          <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=900&q=80" alt="Balayage Technik"
+            loading="lazy" />
+          <div class="gallery-caption">Balayage Technik</div>
+        </div>
+        <div class="gallery-img-panel" style="width:52vw">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80" alt="Salon Atmosphäre"
+            loading="lazy" />
+          <div class="gallery-caption">Salon Atmosphäre</div>
+        </div>
+        <div class="gallery-img-panel" style="width:36vw">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80" alt="Farb & Schnitt"
+            loading="lazy" />
+          <div class="gallery-caption">Farb &amp; Schnitt</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">Bewertungen</span>
+        <h2 class="section-h2">Was Leipzig <em>sagt.</em></h2>
+      </div>
+      <div class="reviews-rating">
+        <span class="rating-num">5.0</span>
+        <div class="rating-stars">★★★★★</div>
+        <span class="rating-count">64+ Bewertungen</span>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card r-up">
+        <span class="quote-mark">"</span>
+        <p>Ich bin super zufrieden mit dem Ergebnis! Meine Highlights sehen absolut natürlich aus — genau so wie ich es
+          mir vorgestellt habe. Werde definitiv wiederkommen.</p>
+        <div class="review-meta"><span class="review-author">Lilly Anzer</span><span class="review-date">Feb 2025</span>
+        </div>
+      </div>
+      <div class="review-card r-up">
+        <span class="quote-mark">"</span>
+        <p>Erstes Mal hier gewesen und direkt verliebt! Irena hat mich super beraten und das Ergebnis ist einfach
+          traumhaft. Der Salon hat eine tolle Atmosphäre.</p>
+        <div class="review-meta"><span class="review-author">Caro Seil</span><span class="review-date">Jan 2025</span>
+        </div>
+      </div>
+      <div class="review-card r-up">
+        <span class="quote-mark">"</span>
+        <p>Paul hat mir bei der Farbberatung sehr geholfen. Er hat genau verstanden was ich wollte und das Ergebnis
+          übertrifft meine Erwartungen. Absolut empfehlenswert!</p>
+        <div class="review-meta"><span class="review-author">Nati Nat Nerf</span><span class="review-date">Dez
+            2024</span></div>
+      </div>
+      <div class="review-card r-up">
+        <span class="quote-mark">"</span>
+        <p>Fadi weiß wirklich wie man mit Locken umgeht. Zum ersten Mal in Jahren bin ich mit meinem Haarschnitt
+          wirklich glücklich. Danke!</p>
+        <div class="review-meta"><span class="review-author">Claudia</span><span class="review-date">Nov 2024</span>
+        </div>
+      </div>
+      <div class="review-card r-up">
+        <span class="quote-mark">"</span>
+        <p>Mein blondes Haar wurde wunderschön restauriert. Kein Bruch, toller Glanz — das Team hier weiß was es tut.
+          Ich werde auf jeden Fall wiederkommen.</p>
+        <div class="review-meta"><span class="review-author">Karina Thomas</span><span class="review-date">Okt
+            2024</span></div>
+      </div>
+      <div class="review-card r-up">
+        <span class="quote-mark">"</span>
+        <p>Online Termin ganz einfach gebucht und das Ergebnis war perfekt. Sehr professionelles Team, tolle Atmosphäre.
+          Genau das was ich mir erhofft hatte!</p>
+        <div class="review-meta"><span class="review-author">Nikita Solberg</span><span class="review-date">Sep
+            2024</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="team-header">
+      <span class="section-label">Das Team</span>
+      <h2 class="section-h2">Unsere <em>Künstler.</em></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card r-up">
+        <div class="team-img-wrap">
+          <img src="assets/team/salon01.png" alt="Annett" loading="lazy" />
+          <div class="team-overlay">
+            <span class="team-name">Annett</span>
+            <span class="team-role">Friseurmeisterin</span>
+            <p class="team-bio">Kurzhaar-Spezialistin für klare Linien & typgerechte Farben & Looks. Geschult &
+              zertifiziert für Extensions, Haarverdichtung & Verlängerung. Beratung auf Deutsch. Friseurin seit 1996.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="team-card r-up">
+        <div class="team-img-wrap">
+          <img src="assets/team/salon02.png" alt="Petra" loading="lazy" />
+          <div class="team-overlay">
+            <span class="team-name">Petra</span>
+            <span class="team-role">Topstylistin</span>
+            <p class="team-bio">Spezialisiert auf moderne Schnitt- & Colorationstechniken. Expertin für präzise
+              Herrenhaarschnitte. Zertifiziert für Haarverdichtung & Verlängerung. Beratung auf Deutsch. Friseurin seit
+              2000.</p>
+          </div>
+        </div>
+      </div>
+      <div class="team-card r-up">
+        <div class="team-img-wrap">
+          <img src="assets/team/salon04.png" alt="Irena" loading="lazy" />
+          <div class="team-overlay">
+            <span class="team-name">Irena</span>
+            <span class="team-role">Friseurmeisterin</span>
+            <p class="team-bio">Expertin für Langhaar & Blond, Airtouch Balayage, Babylights & Foilyage. Zertifiziert
+              für Extensions, Haarverdichtung & Verlängerung. Beratung auf DE, MK, SR, HR, BS, ME, BG & EN. Friseurin
+              seit 1993.</p>
+          </div>
+        </div>
+      </div>
+      <div class="team-card r-up">
+        <div class="team-img-wrap">
+          <img src="assets/team/salon03.png" alt="Fadi" loading="lazy" />
+          <div class="team-overlay">
+            <span class="team-name">Fadi</span>
+            <span class="team-role">Friseurmeister</span>
+            <p class="team-bio">Spezialist für Langhaar und natürliche Freihand-Techniken Balayage. Geschult &
+              zertifiziert für Extensions, Haarverdichtung & Verlängerung. Beratung auf Deutsch und Arabisch. Friseur
+              seit 2009.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & CONTACT -->
+  <section class="info" id="contact">
+    <div class="hours-col">
+      <span class="section-label">Öffnungszeiten</span>
+      <h2 class="section-h2">Wann wir <em>für dich da sind.</em></h2>
+      <div class="hours-list">
+        <div class="hours-row r-up"><span class="day">Montag</span><span class="time">09:00 – 18:30</span></div>
+        <div class="hours-row r-up"><span class="day">Dienstag</span><span class="time">09:00 – 18:30</span></div>
+        <div class="hours-row r-up"><span class="day">Mittwoch</span><span class="time">09:00 – 18:30</span></div>
+        <div class="hours-row r-up"><span class="day">Donnerstag</span><span class="time">09:00 – 18:30</span></div>
+        <div class="hours-row r-up"><span class="day">Freitag</span><span class="time">09:00 – 18:30</span></div>
+        <div class="hours-row r-up"><span class="day">Samstag</span><span class="time">09:00 – 12:00</span></div>
+        <div class="hours-row r-up closed"><span class="day">Sonntag</span><span class="time">Geschlossen</span></div>
+      </div>
+      <div class="hours-note r-up">
+        <strong>Hinweis ab Juni 2025:</strong> 1. &amp; 3. Woche: 9–15 Uhr · 2. &amp; 4. Woche: 12–18 Uhr
+      </div>
+    </div>
+    <div class="contact-col">
+      <span class="section-label">Kontakt</span>
+      <h2 class="section-h2">Wir sind <em>in Leipzig.</em></h2>
+      <div class="contact-list">
+        <div class="contact-row r-up">
+          <div class="contact-icon">📍</div>
+          <div><span class="contact-label">Adresse</span><a
+              href="https://maps.google.com/?q=Elsterstraße+7a+04109+Leipzig" target="_blank"
+              class="contact-val">Elsterstraße 7a, 04109 Leipzig</a></div>
+        </div>
+        <div class="contact-row r-up">
+          <div class="contact-icon">📞</div>
+          <div><span class="contact-label">Telefon</span><a href="tel:+493414895991" class="contact-val">0341
+              4895991</a></div>
+        </div>
+        <div class="contact-row r-up">
+          <div class="contact-icon">💬</div>
+          <div><span class="contact-label">WhatsApp</span><a href="https://wa.me/4915730805197" target="_blank"
+              class="contact-val">0157 30 80 51 97</a></div>
+        </div>
+        <div class="contact-row r-up">
+          <div class="contact-icon">📸</div>
+          <div><span class="contact-label">Instagram</span><a href="https://instagram.com/schnittstelle_elsterstrasse"
+              target="_blank" class="contact-val">@schnittstelle_elsterstrasse</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <div class="cta-ghost">SCHNITTSTELLE</div>
+    <div class="cta-content">
+      <span class="section-label">— Nächster Schritt</span>
+      <h2 class="section-h2 r-up">Bereit für deinen <em>neuen Look?</em></h2>
+      <p class="body-copy r-up">Buche jetzt deinen Termin online oder ruf uns einfach an.</p>
+      <div class="cta-buttons r-up">
+        <a href="https://www.studiobookr.com/schnittstelle-elsterstrasse-62121" target="_blank"
+          class="btn-primary magnetic">Online Termin buchen</a>
+        <a href="tel:+493414895991" class="btn-outline magnetic">Anrufen: 0341 4895991</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="#" class="footer-logo">SCHNITT<span>STELLE</span></a>
+    <p class="footer-copy">© 2025 SCHNITTSTELLE Elsterstraße. Alle Rechte vorbehalten.</p>
+    <div class="footer-links">
+      <a href="https://instagram.com/schnittstelle_elsterstrasse" target="_blank">Instagram</a>
+      <a href="https://www.studiobookr.com/schnittstelle-elsterstrasse-62121" target="_blank">Buchen</a>
+      <a href="tel:+493414895991">Telefon</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
